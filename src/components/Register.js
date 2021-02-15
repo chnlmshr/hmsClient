@@ -6,6 +6,7 @@ const Doctor = (props) => {
     email: "",
     error: "",
     password: "",
+    confirmPassword: "",
     degree: "",
   };
   const [state, setState] = useState(initialState);
@@ -49,7 +50,7 @@ const Doctor = (props) => {
           type="password"
           className="form-control"
           name="password"
-          min={6}
+          minLength={6}
           value={state.password}
           onChange={handleOnChange}
           placeholder="Password"
@@ -57,10 +58,20 @@ const Doctor = (props) => {
       </div>
       <div className="form-group">
         <input
+          type="password"
+          className="form-control"
+          name="confirmPassword"
+          minLength={6}
+          value={state.confirmPassword}
+          onChange={handleOnChange}
+          placeholder="Confirm Password"
+        />
+      </div>
+      <div className="form-group">
+        <input
           type="text"
           className="form-control"
           name="degree"
-          min={6}
           value={state.degree}
           onChange={handleOnChange}
           placeholder="Degree"
@@ -79,6 +90,7 @@ const Patient = (props) => {
     email: "",
     error: "",
     password: "",
+    confirmPassword: "",
     age: "",
     sex: "",
   };
@@ -123,10 +135,21 @@ const Patient = (props) => {
           type="password"
           className="form-control"
           name="password"
-          min={6}
+          minLength={6}
           value={state.password}
           onChange={handleOnChange}
           placeholder="Password"
+        />
+      </div>
+      <div className="form-group">
+        <input
+          type="password"
+          className="form-control"
+          name="confirmPassword"
+          minLength={6}
+          value={state.confirmPassword}
+          onChange={handleOnChange}
+          placeholder="Confirm Password"
         />
       </div>
       <div className="form-group">

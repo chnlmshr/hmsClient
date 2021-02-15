@@ -87,7 +87,7 @@ const Patient = (props) => {
           className="form-control"
           name="password"
           aria-describedby="error"
-          min={6}
+          minLength={6}
           value={state.password}
           onChange={handleOnChange}
           placeholder="Password"
